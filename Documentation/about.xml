@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InClassDemo</name>
+    </assembly>
+    <members>
+        <member name="T:InClassDemo.Sprite">
+            <summary>
+            This class is the basis for all sprites in the game, where a sprite
+            is any graphical object that moves around the screen and collides
+            with other sprites.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Sprite.#ctor(System.Int32,System.Int32)">
+            <summary>
+            This constructor creates a Sprite with a given height and width.
+            </summary>
+            <param name="w">The given width.</param>
+            <param name="h">The given height.</param>
+        </member>
+        <member name="P:InClassDemo.Sprite.Height">
+            <summary>
+            The height of the sprite image (in pixels)
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Width">
+            <summary>
+            The width of the sprite image (in pixels)
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Texture">
+            <summary>
+            The list of different textures that the sprite can display
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Direction">
+            <summary>
+            The direction that the sprite is currently facing
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Rect">
+            <summary>
+            The rectangle that the sprite will be drawn into
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Displacement">
+            <summary>
+            The sprite's displacement from its starting postion in both x and y directions
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.Velocity">
+            <summary>
+            The sprite's velocity in both x and y directions
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.AniFrame">
+            <summary>
+            The current animation frame that the sprite is displaying
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.AniTime">
+            <summary>
+            The time remaining until the animation will change frames
+            </summary>
+        </member>
+        <member name="P:InClassDemo.Sprite.TimeInAir">
+            <summary>
+            The length of time that the sprite has been in the air (when jumping)
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Program.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:InClassDemo.Game1">
+            <summary>
+            This is the main class that contains most of the bulk of the code.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.#ctor">
+            <summary>
+            This is the default created constructor, simply setting a couple of values.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.Initialize">
+            <summary>
+            This initializes all of the objects in the game that are not created from loading content,
+            such as KeyboardState objects or Sprites.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.LoadContent">
+            <summary>
+            This is where all of the graphical content is loaded, and where the player's object's
+            specific values are initialized.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.addEnemy">
+            <summary>
+            This builds an enemy Sprite object, and initializes all of its values to be correct.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.addBullet">
+            <summary>
+            This builds an bullet Sprite object, and initializes all of its values to be correct.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.UnloadContent">
+            <summary>
+            This is used to unload any loaded content (in the case of a graphics reload such as
+            a resolution change).
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            This is the method that is called as the main part of the game's loop.
+            All work or changes will be routed through here.
+            </summary>
+            <param name="gameTime">Contains the timeing values (such as time since last update).</param>
+        </member>
+        <member name="M:InClassDemo.Game1.checkBoundries(InClassDemo.Sprite,System.Boolean)">
+            <summary>
+            This checks to see if the given sprite is outside of the screen, and if it is,
+            it moves it back inside.
+            </summary>
+            <param name="sprite">This is the sprite that will be tested.</param>
+            <param name="bullet">This lets the method know if the sprite is for a bullet.</param>
+        </member>
+        <member name="M:InClassDemo.Game1.increaseLevel">
+            <summary>
+            This changes the level number to one higher and adds the appropriate
+            number of enemies.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.startOver">
+            <summary>
+            This is the method that will set the level back to it's beginning if people want to start over.
+            </summary>
+        </member>
+        <member name="M:InClassDemo.Game1.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            This is the method that contains all of the drawing code.
+            </summary>
+            <param name="gameTime">Contains the timeing values (such as time since last update).</param>
+        </member>
+    </members>
+</doc>
